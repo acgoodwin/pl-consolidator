@@ -6,8 +6,8 @@ from contextlib import asynccontextmanager
 from app.config import settings
 from app.database import engine, Base, wait_for_db
 
-# Import routes (will create these next)
-# from app.api import documents, balances, exports
+# Import routes
+from app.api import documents, balances
 
 # Create tables on startup
 Base.metadata.create_all(bind=engine)
@@ -45,6 +45,10 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Include routers
+app.include_router(documents.router)
+app.include_router(balances.router)
 
 
 @app.get("/health", tags=["health"])
