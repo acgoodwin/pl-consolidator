@@ -1,0 +1,95 @@
+{
+  "company_name": "Panta Gerüstbau GmbH",
+  "fiscal_year": 2025,
+  "document_type": "BILANZ",
+  "accounts": [
+    {
+      "code": "A",
+      "name": "AKTIVA",
+      "level": 1,
+      "account_type": "ASSET",
+      "is_header": true,
+      "is_subtotal": false,
+      "parent_code": null
+    },
+    {
+      "code": "A.I",
+      "name": "Sachanlagen, Betriebs- und Geschäftsausstattung",
+      "level": 2,
+      "account_type": "ASSET",
+      "amount_current_year": 131265.00,
+      "amount_prior_year": 94134.00,
+      "parent_code": "A"
+    },
+    {
+      "code": "B",
+      "name": "Umlaufvermögen",
+      "level": 1,
+      "account_type": "ASSET",
+      "is_header": false,
+      "is_subtotal": false,
+      "parent_code": null
+    },
+    {
+      "code": "B.I",
+      "name": "Forderungen und sonstige Vermögensgegenständ",
+      "level": 2,
+      "account_type": "ASSET",
+      "amount_current_year": 81359.73,
+      "amount_prior_year": 24075.06,
+      "parent_code": "B"
+    },
+    {
+      "code": "C",
+      "name": "PASSIVA",
+      "level": 1,
+      "account_type": "LIABILITY",
+      "is_header": true,
+      "is_subtotal": false,
+      "parent_code": null
+    },
+    {
+      "code": "C.A",
+      "name": "Eigenkapital",
+      "level": 2,
+      "account_type": "EQUITY",
+      "is_subtotal": false,
+      "parent_code": "C"
+    },
+    {
+      "code": "C.A.I",
+      "name": "Gezeichnetes Kapital",
+      "level": 3,
+      "account_type": "EQUITY",
+      "amount_current_year": 25000.00,
+      "amount_prior_year": 25000.00,
+      "parent_code": "C.A"
+    },
+    {
+      "code": "C.B",
+      "name": "Rückstellungen",
+      "level": 2,
+      "account_type": "LIABILITY",
+      "amount_current_year": 3489.34,
+      "amount_prior_year": 2850.00,
+      "parent_code": "C",
+      "is_subtotal": false
+    },
+    {
+      "code": "C.C",
+      "name": "Verbindlichkeiten",
+      "level": 2,
+      "account_type": "LIABILITY",
+      "amount_current_year": 18890.45,
+      "amount_prior_year": 46021.11,
+      "parent_code": "C"
+    }
+  ],
+  "balance_check": {
+    "total_assets": 212624.73,
+    "total_liabilities": 22379.79,
+    "total_equity": 190244.94,
+    "is_balanced": true,
+    "variance": 0.00
+  }
+}
