@@ -58,14 +58,14 @@ class PdfExtractionService:
         text = self.extract_text(0)  # Check first page
         text_upper = text.upper()
 
-        if "HANDELSBILANZEN" in text_upper or "BILANZ" in text_upper:
+        if "JAHRESABSCHLUSS" in text_upper or "HANDELSBILANZEN" in text_upper or "BILANZ" in text_upper:
             return "BILANZ"
         elif "ENTWICKLUNGSÜBERSICHT" in text_upper or "ERFOLGSRECHNUNG" in text_upper:
             return "P_AND_L"
         elif "JAHRESÜBERSICHT" in text_upper:
             return "SUSA"  # Monthly ledger
 
-        return None
+        return "BILANZ"  # Default to BILANZ for annual statements
 
     def extract_balance_sheet_data(self) -> dict:
         """
